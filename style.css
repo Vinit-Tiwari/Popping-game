@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  
+.score{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.time{
+    display: flex;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
