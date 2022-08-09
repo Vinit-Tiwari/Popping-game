@@ -1,5 +1,7 @@
 
 let scoreID=document.getElementById("score")
+let whitePop=new Audio('whitePopAudio.wav')
+let blackPop=new Audio('blackPopAudio.wav')
 
 function balls(){
     this.x=random(0,windowWidth)
@@ -50,10 +52,12 @@ function balls(){
         if(a[i].color==255){
             a.splice(i,1)
             score++
+            whitePop.play()
         }
         else{
             a.splice(i,1)
             score--
+            blackPop.play()
         }
         scoreID.innerHTML=score
       }
@@ -69,6 +73,7 @@ function balls(){
   function updateCountdown(){
     let m=Math.floor(seconds/60)
     let s=seconds%60
+
     timerID.innerHTML=m +":" +s
     seconds--
     if(m==0 && s==0){
